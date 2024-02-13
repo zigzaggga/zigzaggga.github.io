@@ -8,15 +8,16 @@
     <title>Video Container with Border</title>
     <style>
  
-         body { 
-           width: 100vw;
-  height: 100vh;
-  background: url('https://zigzaggga.github.io/asc.jpg');
-   font-family: 'Tangerine', cursive;
-   background-size: cover;
-  margin: 0; /* Menghapus margin bawaan dari body */
-background-repeat: repeat-x repeat-y;
-  }
+        body {
+  background-image: url('https://zigzaggga.github.io/asc.jpg');
+  background-repeat: no-repeat; /* Menghilangkan pengulangan latar belakang */
+  background-position: center center; /* Posisikan latar belakang ke tengah */
+  background-attachment: fixed; /* Tetapkan latar belakang saat menggulir */
+  background-size: cover; /* Meliputi seluruh area dengan latar belakang */
+  font-family: 'Tangerine', cursive;
+  margin: 0; /* Hapus margin bawaan dari body */
+}
+
         /* CSS untuk kontainer video */
         .video-container {
             position: relative;
@@ -127,10 +128,8 @@ background-repeat: repeat-x repeat-y;
         </video>
     </div>
     <div class="console-container">
-    <p class="console-text">ssxxxxxxxxxxx</p>
-    <p class="console-text">xsssssssssssssss</p>
-      <p class="console-text">xssssssssssssss</p>
-   
+    <p class="console-text"></p>
+   <p class="console-text"></p> <p class="console-text"></p> <p class="console-text"></p> <p class="console-text"></p> <p class="console-text"></p>
    
   </div>
 </div>
@@ -141,7 +140,7 @@ background-repeat: repeat-x repeat-y;
   <div class="snowflake"></div>
   <div class="snowflake"></div>
 </div>
-<!-- <script>
+<script>
 (function() {
   var textContainers = document.querySelectorAll('.console-text');
   var texts = [
@@ -177,6 +176,6 @@ background-repeat: repeat-x repeat-y;
 
   typeWriter(currentIndex);
 })();
-</script> -->
+</script>
 </body>
 </html>
