@@ -1,54 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image with background text</title>
-    <style>
-        body{
-            background: #111;
-            margin: 0;
-        }
-        .image    
-        {   
-            justify-content: center;
-            align-items: center;
-            background-image: url(https://zigzaggga.github.io/tes.jpg); /* Here choose your photo */
-            width: 700px;  /* Adjust your width of the image*/
-            height: 4000px;   /* Adjust your  height of the image*/
-            background-repeat: no-repeat ;
-            background-position: right;
-            margin: 0 auto;
-            overflow: hidden;
-            background-size: cover;
-            -webkit-background-clip:text;
-            background-attachment: fixed;
-            -webkit-text-fill-color: rgba(255, 9, 9, 0);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Console Text</title>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=sans-serif);
+  body {
+    background: #111;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px; /* Maksimum lebar kotak */
+    box-sizing: border-box; /* Memperhitungkan ketebalan border ke dalam lebar dan tinggi */
+  }
+
+  .video-container {
+    border: 2px solid white; /* Border untuk video */
+    margin-: 10px; /* Jarak antara video dan teks */
+  }
+
+  .console-container {
+    border: 2px solid white; /* Border untuk teks */
+    padding: 20px;
+    margin-top: 10px; /* Jarak antara video dan teks */
+    color: white; /* Warna teks */
+  }
+
+  .console-text {
+    display: block;
+      margin-top: 10px;
+    margin-bottom: 0; /* Menghapus jarak antar paragraf */
+  }
+
+  .console-underscore {
+    display: inline-block;
+    animation: blink-animation 0.7s infinite;
+  }
+
+  @keyframes blink-animation {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  video {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Pusatkan video di dalam kotak */
+  }
+</style>
 </head>
 <body>
-    <div class="image">
-        <p>
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
-        </p>
-    </div>
+<div class="container">
+  <div class="video-container">
+    <video id="myVideo" controls muted autoplay>
+      <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="console-container">
+    <p class="console-text"></p>
+    <p class="console-text"></p>
+      <p class="console-text"></p>
+        <p class="console-text"></p>
+          <p class="console-text"></p>
+            <p class="console-text"></p>
+              <p class="console-text"></p>
+                <p class="console-text"></p>
+                  <p class="console-text"></p>
+                    <p class="console-text"></p>
+                      <p class="console-text"></p>
+    <p class="console-text"></p>
+    <div class="console-underscore">&#95;</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var textContainers = document.querySelectorAll('.console-text');
+  var texts = [
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Made with Love.'
+  ];
+  var currentIndex = 0;
+
+  function typeWriter(index) {
+    var textContainer = textContainers[index];
+    var text = texts[index];
+    var textIndex = 0;
+
+    function type() {
+      if (textIndex < text.length) {
+        textContainer.textContent += text.charAt(textIndex);
+        textIndex++;
+        setTimeout(type, Math.random() * 150 + 50);
+      } else {
+        currentIndex++;
+        if (currentIndex < texts.length) {
+          setTimeout(function() {
+            typeWriter(currentIndex);
+          }, 1000);
+        }
+      }
+    }
+
+    type();
+  }
+
+  typeWriter(currentIndex);
+})();
+</script>
 </body>
 </html>
