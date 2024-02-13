@@ -8,15 +8,18 @@
 <body>
     <h2>Contoh Video Autoplay dengan JavaScript</h2>
 
-    <video id="myVideo" width="640" height="360" controls>
+    <video id="myVideo" width="640" height="360" controls muted>
         <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
-
+        <source src="https://zigzaggga.github.io/vid.webm" type="video/webm">
+        Your browser does not support the video tag.
     </video>
 
     <script>
         window.onload = function() {
-            var video = document.getElementById("myVideo");
-            video.play();
+            setTimeout(function() {
+                var video = document.getElementById("myVideo");
+                video.play();
+            }, 0); // Menunggu 1 detik sebelum memutar video
         };
     </script>
 </body>
