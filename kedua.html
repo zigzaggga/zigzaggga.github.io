@@ -1,76 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animated Console Text</title>
-<style>
-  @import url(https://fonts.googleapis.com/css?family=sans-serif);
-  body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Container with Border</title>
+    <style>
+         body {
     background: #111;
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+   
   }
+        /* CSS untuk kontainer video */
+        .video-container {
+            position: relative;
+            width: 640px; /* Lebar kotak */
+            height: 360px; /* Tinggi kotak */
+            margin: 0 auto; /* Membuat kotak berada di tengah */
+            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
+            border: 2px solid #ccc; /* Bingkai untuk kotak video */
+            border-radius: 10px; /* Membuat sudut kotak video sedikit bulat */
+            background-color: black; /* Latar belakang hitam */
+        }
 
-  .container {
-    text-align: center;
-    padding: 20px;
-    width: 80%;
-    max-width: 800px; /* Maksimum lebar kotak */
-    box-sizing: border-box; /* Memperhitungkan ketebalan border ke dalam lebar dan tinggi */
-  }
+        /* CSS untuk video */
+        video {
+            width: 100%; /* Mengisi lebar kotak video */
+            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            display: block; /* Menghilangkan margin tambahan */
+        }
 
-  .video-container {
-    border: 2px solid white; /* Border untuk video */
-    margin-: 10px; /* Jarak antara video dan teks */
-  }
+        /* CSS untuk teks */
+        .console-text {
+            margin-top: 20px; /* Jarak antara teks dan kotak video */
+             width: 100%; /* Mengisi lebar kotak video */
+            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            display: block; /* Menghilangkan margin tambahan */
+             text-align: center;
+              color: white;
+        }
 
-  .console-container {
-    border: 2px solid white; /* Border untuk teks */
-    padding: 20px;
-    margin-top: 10px; /* Jarak antara video dan teks */
-    color: white; /* Warna teks */
-  }
 
-  .console-text {
-    display: block;
-      margin-top: 10px;
-    margin-bottom: 0; /* Menghapus jarak antar paragraf */
-  }
-
-  .console-underscore {
-    display: inline-block;
-    animation: blink-animation 0.7s infinite;
-  }
-
-  @keyframes blink-animation {
-    50% {
-      opacity: 0;
-    }
-  }
-
-  video {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Pusatkan video di dalam kotak */
-  }
-</style>
+      
+    </style>
 </head>
 <body>
-<div class="container">
-  <div class="video-container">
-    <video id="myVideo" controls muted autoplay>
-      <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="console-container">
+    <div class="video-container">
+        <video id="myVideo" controls muted autoplay>
+            <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="console-container">
     <p class="console-text"></p>
     <p class="console-text"></p>
       <p class="console-text"></p>
@@ -83,15 +63,14 @@
                     <p class="console-text"></p>
                       <p class="console-text"></p>
     <p class="console-text"></p>
-    <div class="console-underscore">&#95;</div>
+   
   </div>
 </div>
-
 <script>
 (function() {
   var textContainers = document.querySelectorAll('.console-text');
   var texts = [
-    'Hello World.',
+    'Hello WorlConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole Textd.',
     'Console Text.',
     'Hello World.',
     'Console Text.',
