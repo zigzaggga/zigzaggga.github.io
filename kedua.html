@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Embedding</title>
+    <title>Video Autoplay with JavaScript</title>
 </head>
 <body>
-    <h2>Contoh Video Embedding</h2>
+    <h2>Contoh Video Autoplay dengan JavaScript</h2>
 
-    <video width="640" height="360" src="https://zigzaggga.github.io/vid.mp4" type="video/mp4" controls>
-       
+    <video id="myVideo" width="640" height="360" controls>
+        <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
+
     </video>
+
+    <script>
+        window.onload = function() {
+            var video = document.getElementById("myVideo");
+            video.play();
+        };
+    </script>
 </body>
 </html>
