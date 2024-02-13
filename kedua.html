@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Autoplay with CSS Styling</title>
+    <title>Image with background text</title>
     <style>
-        /* CSS untuk kontainer video */
-        .video-container {
-            width: 640px; /* Lebar kotak */
-            height: 360px; /* Tinggi kotak */
-            margin: 0 auto; /* Membuat kotak berada di tengah */
-            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
-            position: relative; /* Membuat posisi absolut untuk video */
+        body{
+            background: #111;
+            margin: 0;
         }
-
-        /* CSS untuk video */
-        video {
-            width: 100%; /* Mengisi lebar kotak video */
-            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
-            position: absolute; /* Memosisikan video di dalam kotak */
-            top: 0; /* Mengatur posisi video ke atas */
-            left: 0; /* Mengatur posisi video ke kiri */
+        .image    
+        {   
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://zigzaggga.github.io/asc.jpg); /* Here choose your photo */
+            width: 700px;  /* Adjust your width of the image*/
+            height: 900px;   /* Adjust your  height of the image*/
+            background-repeat: no-repeat ;
+            background-position: right;
+            margin: 0 auto;
+            overflow: hidden;
+            background-size: cover;
+            -webkit-background-clip:text;
+            background-attachment: fixed;
+            -webkit-text-fill-color: rgba(255, 9, 9, 0);
         }
     </style>
 </head>
 <body>
-    <h2>Contoh Video di Kotak Tengah Halaman</h2>
-
-    <div class="video-container">
-        <video id="myVideo" controls muted autoplay>
-            <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
-            <source src="https://zigzaggga.github.io/vid.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
+    <div class="image">
+        <p>
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+         I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+             I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT I LOVE VIRAT 
+        </p>
     </div>
 </body>
 </html>
