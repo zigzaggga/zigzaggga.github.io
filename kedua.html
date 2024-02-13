@@ -11,16 +11,18 @@
          body { 
   background: url('https://zigzaggga.github.io/asc.jpg');
    font-family: 'Tangerine', cursive;
+     background-size: 100% 100%; /
+
   }
         /* CSS untuk kontainer video */
         .video-container {
             position: relative;
-            width: 60%; /* Lebar kotak */
-            height: 100%; /* Tinggi kotak */
+            width: 640px; /* Lebar kotak */
+            height: 360px; /* Tinggi kotak */
             margin: 0 auto; /* Membuat kotak berada di tengah */
-            margin-top: 10%;
+            margin-top: 10%; /* Jarak antara teks dan kotak video */
             overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
-            border: 10px solid #ccc; /* Bingkai untuk kotak video */
+            border: 4px solid #ccc; /* Bingkai untuk kotak video */
             border-radius: 20px; /* Membuat sudut kotak video sedikit bulat */
             background-color: black; /* Latar belakang hitam */
         }
@@ -39,10 +41,8 @@
              width: 100%; /* Mengisi lebar kotak video */
             height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
             display: block; /* Menghilangkan margin tambahan */
-             text-align: justify;
+             text-align: center;
               color: white;
-              font-size:28px;
-
         }
          .console-container {
             margin:0 auto; /* Jarak antara teks dan kotak video */
@@ -106,10 +106,10 @@
 
   @keyframes snowfall {
     0% {
-      transform: translateY(-100vh);
+      transform: translateY(0vh);
     }
     100% {
-      transform: translateY(100vh);
+      transform: translateY(50vh);
     }
   }
 
@@ -128,15 +128,7 @@
     <p class="console-text"></p>
     <p class="console-text"></p>
       <p class="console-text"></p>
-        <p class="console-text"></p>
-          <p class="console-text"></p>
-            <p class="console-text"></p>
-              <p class="console-text"></p>
-                <p class="console-text"></p>
-                  <p class="console-text"></p>
-                    <p class="console-text"></p>
-                      <p class="console-text"></p>
-    <p class="console-text"></p>
+   
    
   </div>
 </div>
@@ -151,7 +143,9 @@
 (function() {
   var textContainers = document.querySelectorAll('.console-text');
   var texts = [
-    'Hello WorlConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole Textd.',
+    'Hello WorlConsole .',
+    'Console Text.',
+    
     'Made with Love.'
   ];
   var currentIndex = 0;
