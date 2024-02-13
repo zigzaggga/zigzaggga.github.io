@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Container with Border</title>
+    <style>
+        /* CSS untuk kontainer video */
+        .video-container {
+            position: relative;
+            width: 640px; /* Lebar kotak */
+            height: 360px; /* Tinggi kotak */
+            margin: 0 auto; /* Membuat kotak berada di tengah */
+            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
+            border: 2px solid #ccc; /* Bingkai untuk kotak video */
+            border-radius: 10px; /* Membuat sudut kotak video sedikit bulat */
+            background-color: black; /* Latar belakang hitam */
+        }
+
+        /* CSS untuk video */
+        video {
+            width: 100%; /* Mengisi lebar kotak video */
+            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            display: block; /* Menghilangkan margin tambahan */
+        }
+
+        /* CSS untuk teks */
+        .outside-text {
+            margin-top: 20px; /* Jarak antara teks dan kotak video */
+            text-align: center; /* Posisi teks di tengah */
+            border: 2px solid #ccc; /* Bingkai untuk teks */
+            padding: 10px; /* Ruang antara teks dan bingkai */
+            border-radius: 10px; /* Membuat sudut bingkai sedikit bulat */
+            width: 640px; /* Lebar kotak teks sama dengan kotak video */
+            margin: 20px auto; /* Membuat kotak teks berada di tengah */
+            background-color: black; /* Latar belakang hitam */
+            color: white; /* Warna teks putih */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="myVideo" controls muted autoplay>
+            <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="outside-text">
+        <p>swswswswswssw</p>
+        <p>swswswswswssw</p>
+        <p>swswswswswssw</p>
+    </div>
+</body>
+</html>
