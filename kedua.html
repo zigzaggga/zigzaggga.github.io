@@ -45,6 +45,7 @@
             display: block; /* Menghilangkan margin tambahan */
              text-align: center;
               color: white;
+              font-size:28px ;
         }
          .console-container {
             margin:0 auto; /* Jarak antara teks dan kotak video */
@@ -127,9 +128,9 @@
         </video>
     </div>
     <div class="console-container">
-    <p class="console-text"></p>
-    <p class="console-text"></p>
-      <p class="console-text"></p>
+    <p class="console-text">sssssssssssssd   ssssssssssssssss    sssssssssssssssss    ssssssssssssss sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+    <p class="console-text">sss</p>
+      <p class="console-text">sss</p>
    
    
   </div>
@@ -141,42 +142,6 @@
   <div class="snowflake"></div>
   <div class="snowflake"></div>
 </div>
-<script>
-(function() {
-  var textContainers = document.querySelectorAll('.console-text');
-  var texts = [
-    'Hello WorlConsole .',
-    'Console Text.',
-    
-    'Made with Love.'
-  ];
-  var currentIndex = 0;
 
-  function typeWriter(index) {
-    var textContainer = textContainers[index];
-    var text = texts[index];
-    var textIndex = 0;
-
-    function type() {
-      if (textIndex < text.length) {
-        textContainer.textContent += text.charAt(textIndex);
-        textIndex++;
-        setTimeout(type, Math.random() * 150 + 50);
-      } else {
-        currentIndex++;
-        if (currentIndex < texts.length) {
-          setTimeout(function() {
-            typeWriter(currentIndex);
-          }, 1000);
-        }
-      }
-    }
-
-    type();
-  }
-
-  typeWriter(currentIndex);
-})();
-</script>
 </body>
 </html>
