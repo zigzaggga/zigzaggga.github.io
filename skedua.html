@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Container with Border</title>
     <style>
+         body {
+    background: #111;
+    font-family: sans-serif;
+   
+  }
         /* CSS untuk kontainer video */
         .video-container {
             position: relative;
@@ -25,17 +30,17 @@
         }
 
         /* CSS untuk teks */
-        .outside-text {
+        .console-text {
             margin-top: 20px; /* Jarak antara teks dan kotak video */
-            text-align: center; /* Posisi teks di tengah */
-            border: 2px solid #ccc; /* Bingkai untuk teks */
-            padding: 10px; /* Ruang antara teks dan bingkai */
-            border-radius: 10px; /* Membuat sudut bingkai sedikit bulat */
-            width: 640px; /* Lebar kotak teks sama dengan kotak video */
-            margin: 20px auto; /* Membuat kotak teks berada di tengah */
-            background-color: black; /* Latar belakang hitam */
-            color: white; /* Warna teks putih */
+             width: 100%; /* Mengisi lebar kotak video */
+            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            display: block; /* Menghilangkan margin tambahan */
+             text-align: center;
+              color: white;
         }
+
+
+      
     </style>
 </head>
 <body>
@@ -45,10 +50,79 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="outside-text">
-        <p>swswswswswssw</p>
-        <p>swswswswswssw</p>
-        <p>swswswswswssw</p>
-    </div>
+    <div class="console-container">
+    <p class="console-text"></p>
+    <p class="console-text"></p>
+      <p class="console-text"></p>
+        <p class="console-text"></p>
+          <p class="console-text"></p>
+            <p class="console-text"></p>
+              <p class="console-text"></p>
+                <p class="console-text"></p>
+                  <p class="console-text"></p>
+                    <p class="console-text"></p>
+                      <p class="console-text"></p>
+    <p class="console-text"></p>
+   
+  </div>
+</div>
+<script>
+(function() {
+  var textContainers = document.querySelectorAll('.console-text');
+  var texts = [
+    'Hello WorlConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole TextConsole Textd.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Console Text.',
+    'Hello World.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Hello World.',
+    'Console Text.',
+    'Made with Love.'
+  ];
+  var currentIndex = 0;
+
+  function typeWriter(index) {
+    var textContainer = textContainers[index];
+    var text = texts[index];
+    var textIndex = 0;
+
+    function type() {
+      if (textIndex < text.length) {
+        textContainer.textContent += text.charAt(textIndex);
+        textIndex++;
+        setTimeout(type, Math.random() * 150 + 50);
+      } else {
+        currentIndex++;
+        if (currentIndex < texts.length) {
+          setTimeout(function() {
+            typeWriter(currentIndex);
+          }, 1000);
+        }
+      }
+    }
+
+    type();
+  }
+
+  typeWriter(currentIndex);
+})();
+</script>
 </body>
 </html>
