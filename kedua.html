@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Autoplay with JavaScript</title>
+    <title>Video Autoplay with CSS Styling</title>
+    <style>
+        /* CSS untuk kontainer video */
+        .video-container {
+            width: 640px; /* Lebar kotak */
+            height: 360px; /* Tinggi kotak */
+            margin: 0 auto; /* Membuat kotak berada di tengah */
+            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
+            position: relative; /* Membuat posisi absolut untuk video */
+        }
+
+        /* CSS untuk video */
+        video {
+            width: 100%; /* Mengisi lebar kotak video */
+            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            position: absolute; /* Memosisikan video di dalam kotak */
+            top: 0; /* Mengatur posisi video ke atas */
+            left: 0; /* Mengatur posisi video ke kiri */
+        }
+    </style>
 </head>
 <body>
-    <h2>Contoh Video Autoplay dengan JavaScript</h2>
+    <h2>Contoh Video di Kotak Tengah Halaman</h2>
 
-    <video id="myVideo" width="640" height="360" controls muted>
-        <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
-        <source src="https://zigzaggga.github.io/vid.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-
-    <script>
-        window.onload = function() {
-            setTimeout(function() {
-                var video = document.getElementById("myVideo");
-                video.play();
-            }, 1000); // Menunggu 1 detik sebelum memutar video
-        };
-    </script>
+    <div class="video-container">
+        <video id="myVideo" controls muted autoplay>
+            <source src="https://zigzaggga.github.io/vid.mp4" type="video/mp4">
+            <source src="https://zigzaggga.github.io/vid.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </body>
 </html>
