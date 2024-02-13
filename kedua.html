@@ -9,11 +9,12 @@
     <style>
  
          body { 
+           width: 100vw;
+  
   background: url('https://zigzaggga.github.io/asc.jpg');
    font-family: 'Tangerine', cursive;
    background-size: cover;
-
-       margin: 0; /* Menghapus margin bawaan dari body */
+  margin: 0; /* Menghapus margin bawaan dari body */
 
   }
         /* CSS untuk kontainer video */
@@ -106,15 +107,14 @@
     animation-duration: 9s;
   }
 
-  @keyframes snowfall {
-    0% {
-      transform: translateY(0vh);
-    }
-    100% {
-      transform: translateY(50vh);
-    }
+@keyframes snowfall {
+  0% {
+    transform: translateY(0px); /* Memulai dari 0 piksel dari atas */
   }
-
+  100% {
+    transform: translateY(500px); /* Bergerak ke bawah sejauh 500 piksel */
+  }
+}
 
       
     </style>
