@@ -28,9 +28,12 @@
             margin-left: 23% ;
             align-items: flex-end;/
             overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
-            border: 10px solid navy; /* Bingkai untuk kotak video */
+           border: 2px solid rgba(255, 255, 255, 0.5); /* Border transparan */
             border-radius: 40px; /* Membuat sudut kotak video sedikit bulat */
             background-color: white; /* Latar belakang hitam */
+             z-index: -1; /* Mengatur z-index untuk meletakkan video di belakang konten lain */
+      opacity: 0.5; /* Ubah opacity sesuai dengan kebutuhan Anda */
+
         }
 
         /* CSS untuk video */
@@ -49,8 +52,8 @@ box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
 
       #customControls {
     position: absolute;
-    top: 5%;
-    left: 40%;
+    top: 3%;
+    left: 45%;
     transform: translateX(-55%);
     z-index: 1000;
 
