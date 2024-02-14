@@ -9,7 +9,7 @@
     <style>
  
         body {
-  background-image: url('https://zigzaggga.github.io/asc.jpg');
+  background-image: url('https://zigzaggga.github.io/ac.jpg');
   background-repeat: no-repeat; /* Menghilangkan pengulangan latar belakang */
   background-position: center center; /* Posisikan latar belakang ke tengah */
   background-attachment: fixed; /* Tetapkan latar belakang saat menggulir */
@@ -18,24 +18,32 @@
   margin: 0; /* Hapus margin bawaan dari body */
 }
 
-      #customControls {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-}
+        /* CSS untuk kontainer video */
+        .video-container {
+            position: relative;
+            width: 25%; /* Lebar kotak */
+            height: 50%; /* Tinggi kotak */
+            margin: 0 auto; /* Membuat kotak berada di tengah */
+            margin-top: 20%; /* Jarak antara teks dan kotak video */
+           
+           
+        }
 
-#customControls button {
-    margin-right: 10px;
-}
-  
+        /* CSS untuk video */
+        video {
+            width: 100%; /* Mengisi lebar kotak video */
+            height: 100%; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            border: 10px solid #ccc; /* Bingkai untuk kotak video */
+            border-radius: 40px; /* Membuat sudut kotak video sedikit bulat */
+            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
+
+        }
 
         /* CSS untuk teks */
         .console-text {
-            margin-top: 20px; /* Jarak antara teks dan kotak video */
+            margin-top: 40px; /* Jarak antara teks dan kotak video */
              width: 100%; /* Mengisi lebar kotak video */
-            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            height: 100%; /* Menyesuaikan tinggi sesuai rasio aspek video */
             display: block; /* Menghilangkan margin tambahan */
              text-align: center;
               color: white;
@@ -109,16 +117,29 @@
   }
 }
 
-      
+      #customControls {
+    position: relative;
+    bottom: 0px;
+    left: 60%;
+    
+}
+
+#customControls button {
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
     </style>
 </head>
 <body>
-    <video id="myVideo" src="https://zigzaggga.github.io/cek.mp4"></video>
+    <div class="video-container">
+        <video id="myVideo" src="https://zigzaggga.github.io/cek.mp4"></video>
 <div id="customControls">
     <button id="playPauseBtn">Play</button>
     <button id="volumeBtn">Mute</button>
 </div>
 
+    </div>
     <div class="console-container">
     <p class="console-text"></p>
    <p class="console-text"></p> <p class="console-text"></p> <p class="console-text"></p> <p class="console-text"></p> <p class="console-text"></p>
@@ -177,7 +198,7 @@
     var video = document.getElementById("myVideo");
     var playPauseBtn = document.getElementById("playPauseBtn");
     var volumeBtn = document.getElementById("volumeBtn");
-    
+  
     playPauseBtn.addEventListener("click", function() {
         if (video.paused) {
             video.play();
@@ -187,7 +208,6 @@
             playPauseBtn.textContent = "Play";
         }
     });
-    
     volumeBtn.addEventListener("click", function() {
         if (video.muted) {
             video.muted = false;
