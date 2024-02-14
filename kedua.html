@@ -80,8 +80,8 @@ box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
   background-image: url('https://zigzaggga.github.io/sakura.png'); /* Ganti dengan path gambar salju Anda */
   background-size: cover;
   pointer-events: auto; /* Memungkinkan elemen salju untuk berinteraksi dengan pointer (misalnya, mouse) */
-  animation: snowfall linear infinite; /* Terapkan animasi pada elemen salju */
-}
+   animation: snowfall linear infinite, sparkle 1s infinite; /* Terapkan animasi pada elemen salju */
+    }
 
 
     @keyframes snowfall {
@@ -102,6 +102,17 @@ box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
 box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
 text-align: justify;
   }
+   @keyframes sparkle {
+      0% {
+        filter: brightness(100%);
+      }
+      50% {
+        filter: brightness(200%); /* Ubah nilai untuk mengatur intensitas kilau */
+      }
+      100% {
+        filter: brightness(100%);
+      }
+    }
 
     </style>
 </head>
@@ -126,10 +137,7 @@ text-align: justify;
 <div class="snow-container" id="snow-container">
     <!-- Container untuk hujan salju -->
     <div class="snowflake"></div>
-    <div class="snowflake"></div>
-    <div class="snowflake"></div>
-    <div class="snowflake"></div>
-    <div class="snowflake"></div>
+    
   </div>
 
 <!-- <script>
@@ -215,7 +223,7 @@ function showSweetAlert() {
       const snowflake = document.createElement('div');
       snowflake.classList.add('snowflake');
       snowflake.style.left = `${Math.random() * window.innerWidth}px`;
-      snowflake.style.animationDuration = `${Math.random() * 5 + 2}s`; // Durasi animasi antara 2 dan 7 detik
+      snowflake.style.animationDuration = `${Math.random() * 8 + 5}s`; // Durasi animasi antara 2 dan 7 detik
       snowflake.style.animationDelay = `${Math.random() * 5}s`; // Delay animasi antara 0 dan 5 detik
       document.getElementById('snow-container').appendChild(snowflake);
 
