@@ -41,11 +41,14 @@
     top: 0;
     left: 0;
       border-radius: 60px; /* Membuat sudut kotak video sedikit bulat */
+      -webkit-box-shadow:0px 0px 105px 45px rgba(45,255,196,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
+box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
         }
 
       #customControls {
     position: relative;
-    bottom: -10px;
+    bottom: -110%;
     left: 60%;
     transform: translateX(-50%);
     z-index: 999;
@@ -69,8 +72,8 @@
 
   .snowflake {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: #fff;
 /*      background-image: url('https://zigzaggga.github.io/asc.jpg');*/
     border-radius: 50%;
@@ -122,7 +125,16 @@
     transform: translateY(500px); /* Bergerak ke bawah sejauh 500 piksel */
   }
 }
-
+ .swal2-popup {
+    background-color: black !important;
+    color: white;
+    border: 5px solid navy;
+    border-radius: 10px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(45,255,196,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
+box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
+text-align: justify;
+  }
 
     </style>
 </head>
@@ -132,7 +144,7 @@
 <div id="customControls">
     <button id="playPauseBtn">Play</button>
     <button id="volumeBtn">Mute</button>
-    <button onclick="showSweetAlert()">Tampilkan SweetAlert</button>
+    <button onclick="showSweetAlert()">❤️</button>
 
 </div>
 
@@ -221,10 +233,12 @@
 // Fungsi untuk menampilkan SweetAlert
 function showSweetAlert() {
     Swal.fire({
-        title: 'Selamat Datang!',
-        text: 'Dear wanitaku selamat ulang tahun ya , semangat dalam karirmu biar bisa capai apa yang ingin kamu mau aku disini disampingmu siap siaga berikan support buat kamu.  Oh iya selamat menua ya dan kalua inimah menuanya harus bareng bareng sama aku  kan ya, btw maaf kalau aku masih belum selaras dengan lisan dan cara pikirmu, maaf karena seringnya marahmu berawal dari responku yang salah tempat, maaf untuk waktu yang nggak bisa ku kasih banyak, perhatiannya juga masih kurang uang jajannya apalagi ya ay 😅. Aku nggak tau waktu kapan umur kita menipis tapi aku harapnya disaat saat terakhir masih ada kamu ,love you sayang 🥰❤️❤️❤️.',
-        icon: 'success', // Tipe pesan (success, error, warning, info)
+        title: '',
+        html:`<br> Dear wanitaku selamat ulang tahun ya , semangat dalam karirmu biar bisa capai apa yang ingin kamu mau aku disini disampingmu siap siaga berikan support buat kamu.  Oh iya selamat menua ya dan kalua inimah menuanya harus bareng bareng sama aku  kan ya, btw maaf kalau aku masih belum selaras dengan lisan dan cara pikirmu, maaf karena seringnya marahmu berawal dari responku yang salah tempat, maaf untuk waktu yang nggak bisa ku kasih banyak, perhatiannya juga masih kurang uang jajannya apalagi ya ay 😅. Aku nggak tau waktu kapan umur kita menipis tapi aku harapnya disaat saat terakhir masih ada kamu ,love you sayang 🥰❤️❤️❤️.`,
+        icon: false,
         confirmButtonText: 'OK'
+
+
     });
 }
 </script>
