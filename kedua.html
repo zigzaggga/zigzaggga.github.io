@@ -22,10 +22,10 @@
         /* CSS untuk kontainer video */
         .video-container {
             position: relative;
-            width: 60%; /* Lebar kotak */
-            height: 20%; /* Tinggi kotak */
+            width: 600px; /* Lebar kotak */
+            height: 500px; /* Tinggi kotak */
             margin: 0 auto; /* Membuat kotak berada di tengah */
-            margin-bottom: 20%; /* Jarak antara teks dan kotak video */
+         align-items: flex-end;/
             overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
             border: 10px solid navy; /* Bingkai untuk kotak video */
             border-radius: 80px; /* Membuat sudut kotak video sedikit bulat */
@@ -34,19 +34,18 @@
 
         /* CSS untuk video */
         video {
-            width: 100%; /* Mengisi lebar kotak video */
-            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
-            display: block; /* Menghilangkan margin tambahan */
-              border-radius: 0px; /* Membuat sudut kotak video sedikit bulat */
-           
+             width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+      border-radius: 60px; /* Membuat sudut kotak video sedikit bulat */
         }
-
-      
-
 
       #customControls {
     position: relative;
-    bottom: 0px;
+    bottom: -10px;
     left: 60%;
     transform: translateX(-50%);
     z-index: 999;
@@ -54,8 +53,8 @@
 
 #customControls button {
     margin-right: 20px;
-    height:20% ;
-    width:25% ;
+    height:30px ;
+    width:50px% ;
    background-color: blue;
    border: 20%;
  border-radius:20% ;    
