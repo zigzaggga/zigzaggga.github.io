@@ -68,20 +68,21 @@ box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 10px;
+      height: 10px;
       pointer-events: none; /* Mencegah elemen salju mengganggu interaksi pengguna */
     }
 
-    .snowflake {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: #fff;
-      border-radius: 50%;
-      pointer-events: auto; /* Memungkinkan elemen salju untuk berinteraksi dengan pointer (misalnya, mouse) */
-      animation: snowfall linear infinite; /* Terapkan animasi pada elemen salju */
-    }
+   .snowflake {
+  position: absolute;
+  width: 100%; /* Ubah lebar gambar salju */
+  height: 100%; /* Ubah tinggi gambar salju */
+  background-image: url('https://zigzaggga.github.io/bintang.png'); /* Ganti dengan path gambar salju Anda */
+  background-size: cover;
+  pointer-events: auto; /* Memungkinkan elemen salju untuk berinteraksi dengan pointer (misalnya, mouse) */
+  animation: snowfall linear infinite; /* Terapkan animasi pada elemen salju */
+}
+
 
     @keyframes snowfall {
       0% {
