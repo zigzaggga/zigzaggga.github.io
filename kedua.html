@@ -64,69 +64,33 @@ box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
  border-radius:20% ;   
 
 }
-.snowflakes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+ .snow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Mencegah elemen salju mengganggu interaksi pengguna */
+    }
 
-  .snowflake {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-/*      background-image: url('https://zigzaggga.github.io/asc.jpg');*/
-    border-radius: 50%;
-    animation: snowfall linear infinite;
-  }
+    .snowflake {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      pointer-events: auto; /* Memungkinkan elemen salju untuk berinteraksi dengan pointer (misalnya, mouse) */
+      animation: snowfall linear infinite; /* Terapkan animasi pada elemen salju */
+    }
 
-  .snowflake:nth-child(1) {
-    left: 10%;
-    animation-duration: 10s;
-  }
-
-  .snowflake:nth-child(2) {
-    left: 20%;
-    animation-duration: 8s;
-  }
-
-  .snowflake:nth-child(3) {
-    left: 30%;
-    animation-duration: 12s;
-  }
-
-  .snowflake:nth-child(4) {
-    left: 40%;
-    animation-duration: 10s;
-  }
-
-  .snowflake:nth-child(5) {
-    left: 50%;
-    animation-duration: 8s;
-  }
-  .snowflake:nth-child(6) {
-    left: 60%;
-    animation-duration: 10s;
-  }
-  .snowflake:nth-child(7) {
-    left: 70%;
-    animation-duration: 8s;
-  }
-  .snowflake:nth-child(8) {
-    left: 80%;
-    animation-duration: 10s;
-  }
-
-@keyframes snowfall {
-  0% {
-    transform: translateY(0px); /* Memulai dari 0 piksel dari atas */
-  }
-  100% {
-    transform: translateY(500px); /* Bergerak ke bawah sejauh 500 piksel */
-  }
-}
+    @keyframes snowfall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
  .swal2-popup {
     background-color: black !important;
     color: white;
@@ -158,16 +122,18 @@ text-align: justify;
    
   </div> -->
 </div>
-<div class="snowflakes" aria-hidden="true">
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-  <div class="snowflake"></div>
-</div>
+<div class="snow-container" id="snow-container">
+    <!-- Container untuk hujan salju -->
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+  </div>
+
 <!-- <script>
 (function() {
   var textContainers = document.querySelectorAll('.console-text');
@@ -245,5 +211,24 @@ function showSweetAlert() {
     });
 }
 </script>
+ <script>
+    // Buat hujan salju secara acak
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+      snowflake.style.animationDuration = `${Math.random() * 5 + 2}s`; // Durasi animasi antara 2 dan 7 detik
+      snowflake.style.animationDelay = `${Math.random() * 5}s`; // Delay animasi antara 0 dan 5 detik
+      document.getElementById('snow-container').appendChild(snowflake);
+
+      // Hapus salju setelah jatuh
+      snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+      });
+    }
+
+    // Buat hujan salju secara berkala
+    setInterval(createSnowflake, 200); // Ubah interval sesuai kecepatan yang Anda inginkan
+  </script>
 </body>
 </html>
