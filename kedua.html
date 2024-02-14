@@ -9,7 +9,7 @@
     <style>
  
         body {
-  background-image: url('https://zigzaggga.github.io/ac.jpg');
+  background-image: url('https://zigzaggga.github.io/asc.jpg');
   background-repeat: no-repeat; /* Menghilangkan pengulangan latar belakang */
   background-position: center center; /* Posisikan latar belakang ke tengah */
   background-attachment: fixed; /* Tetapkan latar belakang saat menggulir */
@@ -33,7 +33,7 @@
         video {
             width: 100%; /* Mengisi lebar kotak video */
             height: 100%; /* Menyesuaikan tinggi sesuai rasio aspek video */
-            border: 10px solid #ccc; /* Bingkai untuk kotak video */
+            border: 4px solid #ccc; /* Bingkai untuk kotak video */
             border-radius: 40px; /* Membuat sudut kotak video sedikit bulat */
             overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
 
@@ -120,8 +120,9 @@
       #customControls {
     position: relative;
     bottom: 0px;
-    left: 60%;
-    
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 
 #customControls button {
