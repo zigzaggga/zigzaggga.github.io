@@ -104,12 +104,15 @@ text-align: justify;
   }
    @keyframes sparkle {
       0% {
-        filter: brightness(100%);
+        filter: brightness(200%);
       }
-      50% {
-        filter: brightness(200%); /* Ubah nilai untuk mengatur intensitas kilau */
+      25% {
+        filter: brightness(150%); /* Ubah nilai untuk mengatur intensitas kilau */
       }
-      100% {
+      75% {
+        filter: brightness(125%);
+      }
+       100% {
         filter: brightness(100%);
       }
     }
@@ -223,7 +226,7 @@ function showSweetAlert() {
       const snowflake = document.createElement('div');
       snowflake.classList.add('snowflake');
       snowflake.style.left = `${Math.random() * window.innerWidth}px`;
-      snowflake.style.animationDuration = `${Math.random() * 8 + 5}s`; // Durasi animasi antara 2 dan 7 detik
+      snowflake.style.animationDuration = `${Math.random() * 6 + 2}s`; // Durasi animasi antara 2 dan 7 detik
       snowflake.style.animationDelay = `${Math.random() * 5}s`; // Delay animasi antara 0 dan 5 detik
       document.getElementById('snow-container').appendChild(snowflake);
 
