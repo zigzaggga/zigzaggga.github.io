@@ -34,7 +34,7 @@
         /* CSS untuk video */
         video {
             width: 100%; /* Mengisi lebar kotak video */
-            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            height: 100%; /* Menyesuaikan tinggi sesuai rasio aspek video */
             display: block; /* Menghilangkan margin tambahan */
             border-radius: 0px; /* Membuat sudut kotak video sedikit bulat */
         }
@@ -122,10 +122,10 @@
 </head>
 <body>
     <div class="video-container">
-        <video id="myVideo" controls muted autoplay>
-            <source src="https://zigzaggga.github.io/cek.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <video id="myVideo" controls autoplay>
+    <source src="https://zigzaggga.github.io/cek.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
     </div>
     <div class="console-container">
     <p class="console-text"></p>
