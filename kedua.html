@@ -16,22 +16,20 @@
   background-attachment: fixed; /* Tetapkan latar belakang saat menggulir */
   background-size: cover; /* Meliputi seluruh area dengan latar belakang */
   font-family: 'PriceDown', sans-serif;
-
+  margin: 0; /* Hapus margin bawaan dari body */
 }
 
         /* CSS untuk kontainer video */
         .video-container {
             position: relative;
-            width: 300px; /* Lebar kotak */
-            height: 300px; /* Tinggi kotak */
-            margin-top: 20%; /* Membuat kotak berada di tengah */
-            margin-left: 18%; /* Membuat kotak berada di tengah */
-            align-items: flex-end;/
+            width: 600px; /* Lebar kotak */
+            height: 500px; /* Tinggi kotak */
+            margin: 0 auto; /* Membuat kotak berada di tengah */
+         align-items: flex-end;/
             overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
             border: 10px solid navy; /* Bingkai untuk kotak video */
             border-radius: 80px; /* Membuat sudut kotak video sedikit bulat */
             background-color: white; /* Latar belakang hitam */
-            text-align: center;
         }
 
         /* CSS untuk video */
@@ -54,7 +52,7 @@ box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
     left: 60%;
     transform: translateX(-50%);
     z-index: 999;
-
+    
 }
 
 #customControls button {
