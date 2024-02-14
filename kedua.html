@@ -22,9 +22,10 @@
         .video-container {
             position: relative;
             width: 25%; /* Lebar kotak */
-            height: 50%; /* Tinggi kotak */
+            height: 100%; /* Tinggi kotak */
             margin: 0 auto; /* Membuat kotak berada di tengah */
             margin-top: 20%; /* Jarak antara teks dan kotak video */
+            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
            
            
         }
@@ -32,11 +33,10 @@
         /* CSS untuk video */
         video {
             width: 100%; /* Mengisi lebar kotak video */
-            height: 100%; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            height: auto; /* Menyesuaikan tinggi sesuai rasio aspek video */
+            display: block; /* Menghilangkan margin tambahan */
             border: 4px solid #ccc; /* Bingkai untuk kotak video */
-            border-radius: 40px; /* Membuat sudut kotak video sedikit bulat */
-            overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
-
+            border-radius: 20px; /* Membuat sudut kotak video sedikit bulat */
         }
 
         /* CSS untuk teks */
