@@ -28,6 +28,7 @@
             overflow: hidden; /* Menghindari pemangkasan video di luar kotak */
              z-index: -1; /* Mengatur z-index untuk meletakkan video di belakang konten lain */
       opacity: 0.8; /* Ubah opacity sesuai dengan kebutuhan Anda */
+    
 
         }
 
@@ -239,6 +240,15 @@ function showSweetAlert() {
 
     // Buat hujan salju secara berkala
     setInterval(createSnowflake, 2500); // Ubah interval sesuai kecepatan yang Anda inginkan
+  </script>
+  <script>
+    // Ambil elemen video
+    var video = document.getElementById('myVideo');
+
+    // Atur opacity latar belakang menjadi 0 setelah satu menit
+    setTimeout(function() {
+      video.style.opacity = 0;
+    }, 60000); // Waktu dalam milidetik (1 menit = 60000 milidetik)
   </script>
 </body>
 </html>
